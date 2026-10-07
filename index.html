@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#174c3c">
+  <meta name="description" content="Интерактивная игра по английскому языку: There is / There are. 10 уровней, озвучка, перевод и словарь.">
+  <title>Park Quest — There is / There are</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky-noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Park Quest — на главную">
+      <span class="brand-mark">PQ</span>
+      <span><b>Park Quest</b><small>There is / There are</small></span>
+    </a>
+    <nav class="top-actions" aria-label="Быстрые действия">
+      <button class="chip" id="soundTestBtn" type="button"><span>🔊</span><span>Проверить звук<small>Test the sound</small></span></button>
+      <button class="chip" id="openMemoBtn" type="button"><span>📘</span><span>Памятка<small>Grammar guide</small></span></button>
+      <button class="chip basket-chip" id="openBasketBtn" type="button"><span>🧺</span><span>Корзина<small>My basket</small></span><b id="basketCount">0</b></button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow"><span>🌿</span> Интерактивная прогулка • Interactive park adventure</p>
+        <h1>Что находится<br><em>в волшебном парке?</em></h1>
+        <p class="translation">What is there in the magic park?</p>
+        <p class="lead">Исследуй парк, собирай английские слова и предложения в корзину и научись уверенно использовать <b>there is</b> и <b>there are</b>.</p>
+        <p class="lead-en">Explore the park, collect English words and sentences, and master <b>there is</b> and <b>there are</b>.</p>
+        <div class="hero-buttons">
+          <button class="primary-btn" id="startBtn" type="button">Начать квест <span>Start the quest</span> →</button>
+          <button class="secondary-btn speak-btn" type="button" data-speak="Welcome to Park Quest! Let's discover what is in the park.">🔊 Послушать приветствие</button>
+        </div>
+        <div class="mini-facts" aria-label="Особенности игры">
+          <span>✓ 10 открытых уровней</span><span>✓ перевод в каждом задании</span><span>✓ без регистрации</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Иллюстрация волшебного парка">
+        <img src="assets/park-scene.svg" alt="Парк с фонтаном, деревьями, скамейками, утками, детьми и собакой">
+        <div class="guide-bubble">
+          <span class="guide-avatar">🦊</span>
+          <div><b>Hi! I’m Foxy.</b><small>Привет! Я Фокси.</small></div>
+          <button class="round-speak speak-btn" type="button" aria-label="Озвучить фразу" data-speak="Hi! I'm Foxy. Let's explore the park together!">🔊</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="rule-strip shell" aria-labelledby="quick-rule-title">
+      <div class="rule-intro">
+        <span class="section-number">01</span>
+        <div><p class="eyebrow">Быстрый старт • Quick start</p><h2 id="quick-rule-title">Главное правило</h2></div>
+      </div>
+      <div class="rule-cards">
+        <article class="rule-card cyan">
+          <span class="rule-icon">1</span>
+          <h3>There <b>is</b> a fountain in the park.</h3>
+          <p>В парке есть <b>один фонтан</b>.</p>
+          <small>Один предмет или неисчисляемое слово → <b>is</b></small>
+          <button class="tiny-speak speak-btn" type="button" data-speak="There is a fountain in the park.">🔊</button>
+        </article>
+        <article class="rule-card coral">
+          <span class="rule-icon">2+</span>
+          <h3>There <b>are</b> three trees in the park.</h3>
+          <p>В парке есть <b>три дерева</b>.</p>
+          <small>Несколько предметов → <b>are</b></small>
+          <button class="tiny-speak speak-btn" type="button" data-speak="There are three trees in the park.">🔊</button>
+        </article>
+        <article class="rule-card yellow">
+          <span class="rule-icon">?</span>
+          <h3><b>Is</b> there a bench in the park?</h3>
+          <p>Есть ли в парке скамейка?</p>
+          <small>В вопросе <b>is/are</b> ставим в начало</small>
+          <button class="tiny-speak speak-btn" type="button" data-speak="Is there a bench in the park?">🔊</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="quest shell" id="quest">
+      <div class="section-heading">
+        <div><p class="eyebrow">Карта приключения • Adventure map</p><h2>10 разных уровней</h2><p>Все уровни открыты. Можно проходить в любом порядке.</p></div>
+        <div class="progress-card">
+          <div><span>Прогресс</span><b id="progressText">0 / 10</b></div>
+          <div class="progress-track"><i id="progressBar"></i></div>
+        </div>
+      </div>
+      <div class="level-map" id="levelMap" aria-label="Выбор уровня"></div>
+      <div class="game-shell">
+        <aside class="mission-card">
+          <div class="mission-top"><span id="missionNumber">Уровень 1</span><span id="missionBadge">Наблюдатель</span></div>
+          <div class="mission-icon" id="missionIcon">🔎</div>
+          <h3 id="missionTitle">Охота за предметами</h3>
+          <p id="missionTranslation">Object hunt</p>
+          <div class="mission-tip" id="missionTip">Нажимай на предметы и слушай предложения.</div>
+          <button class="secondary-btn full" id="resetLevelBtn" type="button">↻ Начать уровень заново</button>
+        </aside>
+        <section class="game-stage" id="gameStage" aria-live="polite"></section>
+      </div>
+    </section>
+
+    <section class="vocab shell" id="vocabulary">
+      <div class="section-heading">
+        <div><p class="eyebrow">Слова парка • Park words</p><h2>Живой словарик</h2><p>Послушай слово, посмотри перевод и положи карточку в свою корзину.</p></div>
+        <button class="primary-btn compact" id="addAllWordsBtn" type="button">Добавить 8 основных слов <span>Add 8 key words</span></button>
+      </div>
+      <div class="word-grid" id="wordGrid"></div>
+    </section>
+
+    <section class="memo shell" id="memo">
+      <div class="section-heading">
+        <div><p class="eyebrow">Ваша памятка • Your grammar guide</p><h2>There is / There are — всё в одном месте</h2><p>Нажми на изображение, чтобы открыть его крупно. Памятку можно скачать.</p></div>
+        <a class="secondary-btn" href="assets/there-is-there-are-memo.jpg" download>↓ Скачать памятку</a>
+      </div>
+      <button class="memo-preview" id="memoPreview" type="button" aria-label="Открыть памятку крупно">
+        <img src="assets/there-is-there-are-memo.jpg" alt="Памятка There is и There are с русским переводом, правилами и примерами">
+        <span>🔍 Открыть крупно • Open full size</span>
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner"><div><b>Park Quest</b><p>Учимся замечать мир — по-английски.</p><small>Learning to notice the world — in English.</small></div><button class="secondary-btn" id="resetAllBtn" type="button">Сбросить прогресс • Reset progress</button></div>
+  </footer>
+
+  <dialog id="basketDialog" class="panel-dialog">
+    <div class="dialog-head"><div><p class="eyebrow">Моя коллекция • My collection</p><h2>Корзина слов и предложений</h2></div><button class="close-btn" data-close-dialog="basketDialog" type="button" aria-label="Закрыть">×</button></div>
+    <div class="basket-tabs"><button class="active" data-basket-tab="all">Все • All</button><button data-basket-tab="word">Слова • Words</button><button data-basket-tab="sentence">Предложения • Sentences</button></div>
+    <div id="basketItems" class="basket-items"></div>
+    <div class="dialog-actions"><button class="secondary-btn" id="copyBasketBtn" type="button">⧉ Скопировать список</button><button class="danger-link" id="clearBasketBtn" type="button">Очистить корзину</button></div>
+  </dialog>
+
+  <dialog id="memoDialog" class="memo-dialog">
+    <button class="close-btn floating" data-close-dialog="memoDialog" type="button" aria-label="Закрыть">×</button>
+    <img src="assets/there-is-there-are-memo.jpg" alt="Полная памятка There is и There are">
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
