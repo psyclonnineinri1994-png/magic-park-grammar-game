@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" role="img" aria-labelledby="title desc">
+  <title id="title">Magic park</title>
+  <desc id="desc">A colorful park with three trees, two benches, one fountain, four ducks, two children, one dog, a kite, flowers, two bicycles and an ice cream cart.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8fdae5"/><stop offset="1" stop-color="#e8f7e5"/></linearGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#78c879"/><stop offset="1" stop-color="#3b9c64"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#1c5542" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="900" height="720" rx="40" fill="url(#sky)"/>
+  <circle cx="742" cy="104" r="58" fill="#ffe28a"/>
+  <g fill="#fff" opacity=".85"><ellipse cx="174" cy="105" rx="70" ry="24"/><ellipse cx="225" cy="103" rx="50" ry="19"/><ellipse cx="558" cy="154" rx="64" ry="21"/><ellipse cx="610" cy="152" rx="39" ry="16"/></g>
+  <path d="M0 250 Q170 190 330 245 T650 238 T900 220 V720 H0Z" fill="#a6d68a"/>
+  <path d="M0 342 Q165 281 340 330 T700 315 T900 300 V720 H0Z" fill="url(#grass)"/>
+  <!-- winding path -->
+  <path d="M446 720 C430 605 580 590 532 505 C493 437 405 446 436 355 C454 305 498 286 519 260" fill="none" stroke="#efd69f" stroke-width="88" stroke-linecap="round"/>
+  <path d="M446 720 C430 605 580 590 532 505 C493 437 405 446 436 355 C454 305 498 286 519 260" fill="none" stroke="#f7e8c5" stroke-width="70" stroke-linecap="round"/>
+  <!-- pond -->
+  <ellipse cx="680" cy="548" rx="173" ry="86" fill="#4eb7cf" stroke="#c3ebdc" stroke-width="12"/>
+  <path d="M551 539 Q590 520 632 540 T716 538 T801 540" fill="none" stroke="#a4e3e9" stroke-width="5" opacity=".8"/>
+  <!-- trees 1,2,3 -->
+  <g filter="url(#shadow)">
+    <g transform="translate(92 226)"><rect x="51" y="102" width="30" height="146" rx="12" fill="#8a593d"/><circle cx="65" cy="72" r="76" fill="#2d8656"/><circle cx="20" cy="91" r="49" fill="#45a86a"/><circle cx="111" cy="88" r="55" fill="#52b873"/></g>
+    <g transform="translate(690 217) scale(.88)"><rect x="51" y="102" width="30" height="146" rx="12" fill="#8a593d"/><circle cx="65" cy="72" r="76" fill="#2d8656"/><circle cx="20" cy="91" r="49" fill="#45a86a"/><circle cx="111" cy="88" r="55" fill="#52b873"/></g>
+    <g transform="translate(290 205) scale(.72)"><rect x="51" y="102" width="30" height="146" rx="12" fill="#8a593d"/><circle cx="65" cy="72" r="76" fill="#2d8656"/><circle cx="20" cy="91" r="49" fill="#45a86a"/><circle cx="111" cy="88" r="55" fill="#52b873"/></g>
+  </g>
+  <!-- fountain -->
+  <g transform="translate(389 300)" filter="url(#shadow)">
+    <ellipse cx="70" cy="92" rx="82" ry="30" fill="#d9eef1" stroke="#456d70" stroke-width="5"/>
+    <ellipse cx="70" cy="86" rx="61" ry="18" fill="#56bfd2"/>
+    <path d="M70 79V23" stroke="#55797c" stroke-width="12" stroke-linecap="round"/>
+    <path d="M70 29C35 38 39 64 23 72M70 29c34 9 30 35 47 43M70 21c-14-20-28-15-32 5M70 21c14-20 28-15 32 5" fill="none" stroke="#81dced" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="70" cy="18" r="10" fill="#ffd66f"/>
+  </g>
+  <!-- benches -->
+  <g fill="#bb7146" stroke="#71472f" stroke-width="5" filter="url(#shadow)">
+    <g transform="translate(169 475)"><rect width="135" height="25" rx="8"/><rect y="-43" width="135" height="31" rx="8"/><path d="M18 22v45M117 22v45"/></g>
+    <g transform="translate(625 364) scale(.86)"><rect width="135" height="25" rx="8"/><rect y="-43" width="135" height="31" rx="8"/><path d="M18 22v45M117 22v45"/></g>
+  </g>
+  <!-- ice cream cart -->
+  <g transform="translate(42 445)" filter="url(#shadow)"><rect width="95" height="90" rx="9" fill="#fff7dc" stroke="#316a5b" stroke-width="5"/><path d="M-8 0h111L88-31H8Z" fill="#ff7e68" stroke="#316a5b" stroke-width="5"/><path d="M12-4v-23M38-4v-23M64-4v-23M88-4v-23" stroke="#fff7dc" stroke-width="9"/><circle cx="19" cy="97" r="14" fill="#2f4b47"/><circle cx="78" cy="97" r="14" fill="#2f4b47"/><text x="47" y="50" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="15" fill="#ff6e5b">ICE CREAM</text></g>
+  <!-- children -->
+  <g filter="url(#shadow)">
+    <g transform="translate(335 485)"><circle cx="0" cy="-64" r="18" fill="#8f5c3d"/><circle cx="0" cy="-60" r="14" fill="#e9ae80"/><path d="M-20-45Q0-58 20-45L15 15H-15Z" fill="#ff7e68"/><path d="M-11 14l-8 55M11 14l10 55" stroke="#2d4f66" stroke-width="13" stroke-linecap="round"/><path d="M-17-35l-25 34M17-35l35-22" stroke="#e9ae80" stroke-width="10" stroke-linecap="round"/></g>
+    <g transform="translate(575 402) scale(.9)"><circle cx="0" cy="-64" r="18" fill="#4a2e29"/><circle cx="0" cy="-60" r="14" fill="#c98259"/><path d="M-20-45Q0-58 20-45L15 15H-15Z" fill="#8169c9"/><path d="M-11 14l-8 55M11 14l10 55" stroke="#3a5c43" stroke-width="13" stroke-linecap="round"/><path d="M-17-35l-28-14M17-35l27 19" stroke="#c98259" stroke-width="10" stroke-linecap="round"/></g>
+  </g>
+  <!-- dog -->
+  <g transform="translate(315 585)" filter="url(#shadow)"><ellipse cx="0" cy="0" rx="42" ry="27" fill="#d59249"/><circle cx="-34" cy="-20" r="24" fill="#e1a25e"/><path d="M-53-33l-13-26q31 8 30 26M-14-31l13-22q-29 4-30 22" fill="#835334"/><circle cx="-40" cy="-23" r="3"/><path d="M39-8q34-30 39 1" fill="none" stroke="#d59249" stroke-width="10" stroke-linecap="round"/><path d="M-22 17v28M18 17v28" stroke="#a76a38" stroke-width="10" stroke-linecap="round"/></g>
+  <!-- bikes -->
+  <g fill="none" stroke="#31566a" stroke-width="7" filter="url(#shadow)">
+    <g transform="translate(714 431) scale(.72)"><circle cx="0" cy="40" r="29"/><circle cx="92" cy="40" r="29"/><path d="M0 40l36-48 21 48H0l50-25 42 25M36-8h27M50 15l17-33"/></g>
+    <g transform="translate(760 468) scale(.58)"><circle cx="0" cy="40" r="29"/><circle cx="92" cy="40" r="29"/><path d="M0 40l36-48 21 48H0l50-25 42 25M36-8h27M50 15l17-33"/></g>
+  </g>
+  <!-- ducks: 4 -->
+  <g fill="#ffe066" stroke="#7b6334" stroke-width="2">
+    <g transform="translate(590 535)"><ellipse rx="20" ry="12"/><circle cx="-13" cy="-13" r="10"/><path d="M-23-13l-13 4 13 5" fill="#ff9b4b"/></g>
+    <g transform="translate(665 574)"><ellipse rx="20" ry="12"/><circle cx="-13" cy="-13" r="10"/><path d="M-23-13l-13 4 13 5" fill="#ff9b4b"/></g>
+    <g transform="translate(726 527)"><ellipse rx="20" ry="12"/><circle cx="-13" cy="-13" r="10"/><path d="M-23-13l-13 4 13 5" fill="#ff9b4b"/></g>
+    <g transform="translate(781 568)"><ellipse rx="20" ry="12"/><circle cx="-13" cy="-13" r="10"/><path d="M-23-13l-13 4 13 5" fill="#ff9b4b"/></g>
+  </g>
+  <!-- kite -->
+  <g transform="translate(555 125) rotate(9)" filter="url(#shadow)"><path d="M0 0l43 42L0 87l-43-45Z" fill="#ff7e68" stroke="#fff" stroke-width="5"/><path d="M0 0v87M-43 42h86" stroke="#fff" stroke-width="4"/><path d="M0 87q-35 34-11 62t-18 46" fill="none" stroke="#4b5960" stroke-width="3"/><path d="M-5 121l-16-8 5 19M-9 161l-17-7 7 18" fill="#ffd66f"/></g>
+  <!-- flowers -->
+  <g stroke="#2b704f" stroke-width="3"><g transform="translate(120 640)"><path d="M0 0v30M30 2v30M59-2v30M88 0v30"/><g fill="#ff7e68"><circle cx="0" cy="0" r="10"/><circle cx="59" cy="-2" r="10"/></g><g fill="#ffd66f"><circle cx="30" cy="2" r="10"/><circle cx="88" cy="0" r="10"/></g></g><g transform="translate(565 675)"><path d="M0 0v24M28 2v24M55-2v24M82 0v24"/><g fill="#f49bd5"><circle cx="0" cy="0" r="9"/><circle cx="55" cy="-2" r="9"/></g><g fill="#fff16f"><circle cx="28" cy="2" r="9"/><circle cx="82" cy="0" r="9"/></g></g></g>
+  <!-- birds -->
+  <path d="M227 170q16-17 32 0 16-17 32 0M657 105q13-14 26 0 13-14 26 0M340 120q11-12 22 0 11-12 22 0" fill="none" stroke="#2f5b68" stroke-width="5" stroke-linecap="round"/>
+  <!-- count labels -->
+  <g font-family="sans-serif" font-size="17" font-weight="bold" fill="#173b34">
+    <g transform="translate(30 30)"><rect width="214" height="40" rx="20" fill="#fff" opacity=".92"/><text x="107" y="26" text-anchor="middle">Magic Park • Волшебный парк</text></g>
+  </g>
+</svg>
